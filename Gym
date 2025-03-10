@@ -1,36 +1,47 @@
-import java.util.Scanner;
-public class GYM{
+import java.util.*;
+
+public class sandy_gym {
     String name;
     int age;
-    int amount;
-    int fee =100;
+    int fee = 50;
+    int amt;
     boolean status;
     int duration;
 
-    public static void main(String[] args){
-        Scanner in =new Scanner(System.in);
-        GYM obj = new GYM();
-        System.out.println("Enetr the name of the member:");
-        obj.name=in.nextLine();
 
-        System.out.println("Enetr the age:");
-        obj.age=in.nextInt();
-        System.out.println("Enetr the duration of the member:");
-        obj.duration=in.nextInt();
-        System.out.println("Is member active (True/False):");
-        obj.status=in.nextBoolean();
-        obj.amount=obj.fee*obj.duration;
+    int calc(int duration) {
+        amt = duration * fee;
+        return amt;
+    }
 
-        System.out.println("Member details:");
-        System.out.println("Name:"+obj.name);
-        System.out.println("Age:"+obj.age);
-        System.out.println("Duration:"+obj.duration);
-        System.out.println("Total Amount:"+obj.amount);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        sandy_gym obj = new sandy_gym();
 
 
+        System.out.println("Enter the number of people:");
+        int n = sc.nextInt();
+        sc.nextLine();
 
 
+        for (int i = 1; i <= n; i++) {
+
+            System.out.println("Enter the name of member " + i + ":");
+            obj.name = sc.nextLine();
+            System.out.println("Enter the age of member " + i + ":");
+            obj.age = sc.nextInt();
+            sc.nextLine(); 
+            System.out.println("Enter the duration (in months) of the membership for member " + i + ":");
+            obj.duration = sc.nextInt();
+            sc.nextLine();  // Consume the leftover newline
+
+            System.out.println("Enter status (True/False) for member " + i + ":");
+            obj.status = sc.nextBoolean();
+            sc.nextLine();  // Consume the leftover newline
 
 
+            obj.amt = obj.calc(obj.duration);
+            System.out.println("Final amount for member " + i + " is " + obj.amt);
+        }
     }
 }
