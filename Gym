@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class GYM{
+    String name;
+    int age;
+    int amount;
+    int fee =100;
+    boolean status;
+    int duration;
+
+    public static void main(String[] args){
+        Scanner in =new Scanner(System.in);
+        GYM obj = new GYM();
+        System.out.println("Enetr the name of the member:");
+        obj.name=in.nextLine();
+
+        System.out.println("Enetr the age:");
+        obj.age=in.nextInt();
+        System.out.println("Enetr the duration of the member:");
+        obj.duration=in.nextInt();
+        System.out.println("Is member active (True/False):");
+        obj.status=in.nextBoolean();
+        obj.amount=obj.fee*obj.duration;
+
+        System.out.println("Member details:");
+        System.out.println("Name:"+obj.name);
+        System.out.println("Age:"+obj.age);
+        System.out.println("Duration:"+obj.duration);
+        System.out.println("Total Amount:"+obj.amount);
+
+
+
+
+
+
+    }
+}
