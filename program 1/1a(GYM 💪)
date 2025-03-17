@@ -49,7 +49,7 @@ public class gym
 -->OUTPUT<--
 
 Enter the name of the member:
-Saikumar R
+Sandeep N
 Enter the age:
 20
 Enter the duration (in months) of the membership:
@@ -58,7 +58,7 @@ Is the member active? (True/False):
 True
 
 Member details:
-Name: Saikumar R
+Name: Sandeep N
 Age: 20
 Duration: 12 months
 Total Amount: 6000
